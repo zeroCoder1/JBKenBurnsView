@@ -1,10 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,25 +20,25 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMb-gN-P7d" customClass="JBKenBurnsView" customModule="KenBurns" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="235"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="268.5"/>
+                                <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JB Ken Burns View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="mbi-Gu-h3I">
-                                <rect key="frame" x="0.0" y="145" width="600" height="90"/>
+                                <rect key="frame" x="0.0" y="178.5" width="375" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="Sk0-kk-kEt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="44"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dWd-v5-isc">
-                                <rect key="frame" x="20" y="243" width="560" height="249"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="16" y="276.5" width="343" height="282.5"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">This Ken Burns view is written in Swift by Johan Basberg. It is based on the work by Javier Berlana (https://github.com/jberlana/JBKenBurns).
 
 As our initials are the same, the name of the JBKenBurnsView stays the same.</string>
@@ -42,53 +46,51 @@ As our initials are the same, the name of the JBKenBurnsView stays the same.</st
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIb-gM-cIo">
-                                <rect key="frame" x="178" y="490" width="120" height="44"/>
+                                <rect key="frame" x="81.5" y="557" width="88" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="7L3-ia-5yF"/>
-                                    <constraint firstAttribute="width" constant="120" id="eEG-EW-3AM"/>
                                 </constraints>
                                 <state key="normal" title="Normal Start"/>
                                 <connections>
-                                    <action selector="startButtonTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nEQ-uP-oVw"/>
+                                    <action selector="startButtonTouchUpWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rdd-Ls-pFv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2L-sd-8cQ">
-                                <rect key="frame" x="346" y="536" width="32" height="44"/>
+                                <rect key="frame" x="233.5" y="603" width="32" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Ee6-St-5x1"/>
                                 </constraints>
                                 <state key="normal" title="Stop">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.074743433489999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.0" blue="0.074743433489999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="stopButtonTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UtO-qF-sVk"/>
+                                    <action selector="stopButtonTouchUpWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K8E-av-i6q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSu-4B-DGP">
-                                <rect key="frame" x="217" y="536" width="42" height="44"/>
+                                <rect key="frame" x="104.5" y="603" width="42" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="II2-yF-YyM"/>
                                 </constraints>
                                 <state key="normal" title="Pause">
-                                    <color key="titleColor" red="0.88828301429748535" green="0.58409684896469116" blue="0.03134448453783989" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.88828301429748535" green="0.58409684896469116" blue="0.03134448453783989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="pauseButtonTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NAk-r8-hZx"/>
+                                    <action selector="pauseButtonTouchUpWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Px-xb-l02"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQ0-NM-M0W">
-                                <rect key="frame" x="302" y="490" width="120" height="44"/>
+                                <rect key="frame" x="202" y="557" width="95" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="HUN-C7-Qbj"/>
-                                    <constraint firstAttribute="width" constant="120" id="RjY-7u-f80"/>
                                 </constraints>
                                 <state key="normal" title="Random Start"/>
                                 <connections>
-                                    <action selector="startRandomButtonTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Oi-lK-UJZ"/>
+                                    <action selector="startRandomButtonTouchUpWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="chz-C0-URc"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="VIb-gM-cIo" firstAttribute="top" secondItem="dWd-v5-isc" secondAttribute="bottom" constant="-2" id="2R0-ia-UAf"/>
                             <constraint firstItem="mbi-Gu-h3I" firstAttribute="trailing" secondItem="rMb-gN-P7d" secondAttribute="trailing" id="BGA-cV-5kI"/>

@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
 
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
             UIImage(named: "Johan")!,
             ]
         
-        kenBurnsView.animateWithImages(images, imageAnimationDuration: 10, initialDelay: 0, shouldLoop: true)
+        kenBurnsView.animateWithImages(images: images, imageAnimationDuration: 10, initialDelay: 0, shouldLoop: true)
     }
 
     @IBAction func startRandomButtonTouchUp(sender: UIButton) {
@@ -49,16 +49,16 @@ class ViewController: UIViewController {
             UIImage(named: "Johan")!,
             ]
         
-        kenBurnsView.animateWithImages(images, imageAnimationDuration: 10, initialDelay: 0, shouldLoop: true, randomFirstImage: true)
+        kenBurnsView.animateWithImages(images: images, imageAnimationDuration: 10, initialDelay: 0, shouldLoop: true, randomFirstImage: true)
     }
 
     @IBAction func pauseButtonTouchUp(sender: UIButton) {
         if kenBurnsView.isPaused {
             kenBurnsView.resumeAnimation()
-            pauseButton.setTitle("Pause", forState: .Normal)
+            pauseButton.setTitle("Pause", for: .normal)
         } else {
             kenBurnsView.pauseAnimation()
-            pauseButton.setTitle("Resume", forState: .Normal)
+            pauseButton.setTitle("Resume", for: .normal)
         }
     }
 
